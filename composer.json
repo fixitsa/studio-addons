@@ -1,52 +1,60 @@
 {
-    "name": "botman/studio-addons",
-    "license": "MIT",
-    "description": "BotMan Studio specific addons.",
-    "keywords": [
-        "Bot",
-        "BotMan",
-        "Studio"
-    ],
-    "homepage": "http://github.com/botman/studio-addons",
-    "authors": [
-        {
-            "name": "Marcel Pociot",
-            "email": "m.pociot@gmail.com"
-        }
-    ],
-    "require": {
-        "php": "^7.2",
-        "botman/botman": "~2.0 || ~3.0",
-        "guzzlehttp/guzzle": "~6.0 || ^7.0.1",
-        "illuminate/support": "^5.5 || ^6.0 || ^7.0 || ^8.0",
-        "illuminate/contracts": "^5.5 || ^6.0 || ^7.0 || ^8.0",
-        "illuminate/console": "^5.5 || ^6.0 || ^7.0 || ^8.0",
-        "thecodingmachine/discovery": "^1.2"
-    },
-    "require-dev": {
-        "mockery/mockery": "^1.0",
-        "orchestra/testbench": "^3.5 || ^4.0 || ^5.0 || ^6.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "BotMan\\Studio\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "BotMan\\Studio\\Providers\\StudioServiceProvider",
-                "BotMan\\Studio\\Providers\\RouteServiceProvider"
-            ]
-        }
-    },
-    "scripts": {
-        "test": "vendor/bin/phpunit",
-        "cs": "php-cs-fixer fix"
+  "name": "botman/studio-addons",
+  "license": "MIT",
+  "description": "BotMan Studio specific addons.",
+  "keywords": [
+    "Bot",
+    "BotMan",
+    "Studio"
+  ],
+  "homepage": "http://github.com/botman/studio-addons",
+  "authors": [
+    {
+      "name": "Marcel Pociot",
+      "email": "m.pociot@gmail.com"
     }
+  ],
+  "require": {
+    "php": "^8.1",
+    "botman/botman": "*",
+    "guzzlehttp/guzzle": "^7.4",
+    "illuminate/support": "^9.1",
+    "illuminate/contracts": "^9.1",
+    "illuminate/console": "^9.1",
+    "thecodingmachine/discovery": "^1.3"
+  },
+  "repositories": [
+    {
+      "type": "path",
+      "url": "../botman"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BotMan\\Studio\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BotMan\\Studio\\Providers\\StudioServiceProvider",
+        "BotMan\\Studio\\Providers\\RouteServiceProvider"
+      ]
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "cs": "php-cs-fixer fix"
+  },
+  "prefer-stable": true,
+  "minimum-stability": "dev",
+  "require-dev": {
+    "mockery/mockery": "^1.5",
+    "orchestra/testbench": "^7.0"
+  }
 }
